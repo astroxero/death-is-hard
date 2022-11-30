@@ -20,10 +20,12 @@ public class Moveee : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rb.AddForce(transform.right * sped);
+            transform.localScale = new Vector2(0.12f, 0.12f);
         }
         if (Input.GetKey(KeyCode.A))
         {
             rb.AddForce(-transform.right * sped);
+            transform.localScale = new Vector2(-0.12f, 0.12f);
         }
     }
 }
