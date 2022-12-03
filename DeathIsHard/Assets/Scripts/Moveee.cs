@@ -7,6 +7,7 @@ public class Moveee : MonoBehaviour
     
     Rigidbody2D rb;
     public float sped = 40;
+    public float bodySize = 0.72f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,12 @@ public class Moveee : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rb.AddForce(transform.right * sped);
-            transform.localScale = new Vector2(0.12f, 0.12f);
+            transform.localScale = new Vector2(bodySize, bodySize);
         }
         if (Input.GetKey(KeyCode.A))
         {
             rb.AddForce(-transform.right * sped);
-            transform.localScale = new Vector2(-0.12f, 0.12f);
+            transform.localScale = new Vector2(-bodySize, bodySize);
         }
     }
 }

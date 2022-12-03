@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Arms
+    uniqueID: 181330187
+    locked: 0
