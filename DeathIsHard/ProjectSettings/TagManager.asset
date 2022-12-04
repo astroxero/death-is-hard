@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Antenna
+    uniqueID: 1629909491
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Arms
+    uniqueID: 181330187
     locked: 0
