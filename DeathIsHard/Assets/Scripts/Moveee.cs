@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Moveee : MonoBehaviour
 {
-    
-    Rigidbody2D rb;
+    public Rigidbody2D rb; 
     public Collider2D boxCollider2d;
     public LayerMask platformLayerMask;
     public float sped = 40;
@@ -22,13 +21,13 @@ public class Moveee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
         {
             animatr.SetBool("IsRunning", true);
             rb.AddForce(transform.right * sped);
             transform.localScale = new Vector2(bodySize, bodySize);
         }
-        if (Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.D) && !Input.GetKey(KeyCode.D))
         {
             animatr.SetBool("IsRunning", false);
         }
