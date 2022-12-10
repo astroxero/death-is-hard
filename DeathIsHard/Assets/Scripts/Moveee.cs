@@ -21,13 +21,13 @@ public class Moveee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.D))
         {
             animatr.SetBool("IsRunning", true);
             rb.AddForce(transform.right * sped);
             transform.localScale = new Vector2(bodySize, bodySize);
         }
-        if (Input.GetKeyUp(KeyCode.D) && !Input.GetKey(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.D))
         {
             animatr.SetBool("IsRunning", false);
         }
