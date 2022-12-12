@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176946770}
   - component: {fileID: 176946771}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209436217}
   - component: {fileID: 209436218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NSmile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 260623311}
   - component: {fileID: 260623312}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Gillotine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,10 +392,18 @@ MonoBehaviour:
   boxCollider2d: {fileID: 260623312}
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 4
+    m_Bits: 128
+  nurseLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
   playuhBodee: {fileID: 1684014215}
+  nurzeeBody: {fileID: 406414326}
   totalCount: 2
+  totalNurseCount: 2
   countLeft: 0
+  nurseCountLeft: 0
+  totalBodyCount: 2
+  BodyCountLeft: 0
 --- !u!61 &260623312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -463,7 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 344263181}
   - component: {fileID: 344263182}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +559,7 @@ GameObject:
   - component: {fileID: 406414330}
   - component: {fileID: 406414328}
   - component: {fileID: 406414331}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Nurse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 418993003}
   - component: {fileID: 418993004}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NEye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506060529}
   - component: {fileID: 506060530}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Leg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703896519}
   - component: {fileID: 703896518}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Teeth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1183,7 +1191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950440498}
   - component: {fileID: 950440499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1267,7 +1275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1076243053}
   - component: {fileID: 1076243054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1351,7 +1359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086996835}
   - component: {fileID: 1086996836}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Arm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1435,7 +1443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1141610547}
   - component: {fileID: 1141610548}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Eyeball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207643498}
   - component: {fileID: 1207643499}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1606,7 +1614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227011124}
   - component: {fileID: 1227011125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1690,7 +1698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514782843}
   - component: {fileID: 1514782844}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Leg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559272103}
   - component: {fileID: 1559272104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NEye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1858,7 +1866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616583210}
   - component: {fileID: 1616583211}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1953,7 @@ GameObject:
   - component: {fileID: 1684014221}
   - component: {fileID: 1684014223}
   - component: {fileID: 1684014225}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1982,11 +1990,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30956d12503ba4aef89469390dd08950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 1684014225}
   boxCollider2d: {fileID: 1684014223}
   platformLayerMask:
     serializedVersion: 2
-    m_Bits: 59
+    m_Bits: 127
   sped: 2
   jumpHeight: 500
   bodySize: 1
@@ -2068,7 +2076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1989245343}
   - component: {fileID: 1989245344}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Arm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
