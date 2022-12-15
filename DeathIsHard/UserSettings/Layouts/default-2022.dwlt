@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 274.5
     height: 406.5
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -408,9 +408,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 2afbffff
+      m_SelectedIDs: 8e5f0000
+      m_LastClickedID: 24462
+      m_ExpandedIDs: 0af8ffff2afbffff8e5f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -725,9 +725,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.0555807, y: -0.060815025, z: -0.88422245}
+    m_Target: {x: -4.830714, y: -2.5145755, z: -0.8512249}
     speed: 2
-    m_Value: {x: -1.0555807, y: -0.060815025, z: -0.88422245}
+    m_Value: {x: -4.830714, y: -2.5145755, z: -0.8512249}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -777,9 +777,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.9244123
+    m_Target: 4.3238964
     speed: 2
-    m_Value: 2.9244123
+    m_Value: 4.3238964
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -909,22 +909,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animations
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/roscoerubin-rottenberg/Games/Unity/death-is-hard/DeathIsHard
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a2600000
-    m_LastClickedID: 24738
-    m_ExpandedIDs: 000000003460000000ca9a3bffffff7f
+    m_SelectedIDs: ae600000
+    m_LastClickedID: 24750
+    m_ExpandedIDs: 000000003860000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -952,7 +952,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000034600000
+    m_ExpandedIDs: 0000000038600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
