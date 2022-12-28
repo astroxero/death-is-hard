@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Gilly : MonoBehaviour
 {
+    public Animator anim;
+    public Animator pAnim;
+    public Animator nAnim;
     public Collider2D boxCollider2d;
     public LayerMask playerLayerMask;
     public LayerMask nurseLayerMask;
@@ -11,14 +14,17 @@ public class Gilly : MonoBehaviour
     public GameObject nurzeeBody;
     public float totalCount = 2f;
     public float totalNurseCount = 2f;
-    public float countLeft;
-    public float nurseCountLeft;
+    float countLeft;
+    float nurseCountLeft;
     public float totalBodyCount = 2f;
-    public float BodyCountLeft;
+    float BodyCountLeft;
+    public float totalNSliceCount = 2f;
+    float NSliceCountLeft;
 
     // Start is called before the first frame update
     void Start()
     {
+        NSliceCountLeft = totalNSliceCount;
         countLeft = totalCount;
         nurseCountLeft = totalNurseCount;
         BodyCountLeft = totalBodyCount;
@@ -31,7 +37,7 @@ public class Gilly : MonoBehaviour
         {
             return;
         }
-        nurseCountLeft -= Time.deltaTime;
+
         if (BodyCountLeft == totalBodyCount)
         {
         countLeft -= Time.deltaTime;
@@ -46,6 +52,9 @@ public class Gilly : MonoBehaviour
         if (playerThere() & countLeft <= 0 & nurzeeBody != null)
         {
             playuhBodee.GetComponent<Moveee>().enabled = false;
+            anim.SetTrigger("IsSlicing");
+            pAnim.SetTrigger("IsSlicing");
+            nAnim.SetTrigger("IsSlicing");
             countLeft = totalCount;
         } else if (playerThere())
         {
@@ -62,17 +71,28 @@ public class Gilly : MonoBehaviour
         {
             playuhBodee.GetComponent<Moveee>().enabled = true;
             BodyCountLeft = totalBodyCount;
+            anim.SetTrigger("NotSlicing");
+            pAnim.SetTrigger("NotSlicing");
+            nAnim.SetTrigger("NotSlicing");
         }
         if (nurseThere() & nurseCountLeft <= 0)
         {
-            Destroy(nurzeeBody);
-            nurseCountLeft = totalNurseCount;
+            anim.SetTrigger("IsSlicing");
         } else if (nurseThere())
         {
+            nurseCountLeft -= Time.deltaTime;
 
         } else
         {
             nurseCountLeft = totalNurseCount;
+        }
+        if (nurseCountLeft <= 0)
+        {
+            NSliceCountLeft -= Time.deltaTime;
+            if (NSliceCountLeft <= 0)
+            {
+                Destroy(nurzeeBody);
+            }
         }
     }
     public bool playerThere() {
