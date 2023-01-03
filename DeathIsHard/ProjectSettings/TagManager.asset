@@ -38,10 +38,13 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BG
+  - name: realbg
+    uniqueID: 2402013475
+    locked: 0
+  - name: BG(fg)
     uniqueID: 3361283193
     locked: 0
-  - name: BGOver
+  - name: BG(fg)Over
     uniqueID: 2511347399
     locked: 0
   - name: Under--
@@ -58,4 +61,7 @@ TagManager:
     locked: 0
   - name: Over++
     uniqueID: 3764178809
+    locked: 0
+  - name: FG
+    uniqueID: 3159363807
     locked: 0
