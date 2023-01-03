@@ -38,8 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: realbgUnder
+    uniqueID: 4165855345
+    locked: 0
   - name: realbg
     uniqueID: 2402013475
+    locked: 0
+  - name: realbgOver
+    uniqueID: 3183094571
     locked: 0
   - name: BG(fg)
     uniqueID: 3361283193
