@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gilly : MonoBehaviour
 {
+    public bool killSwitch;
     public Animator anim;
     public Animator pAnim;
     public Animator nAnim;
@@ -20,11 +21,15 @@ public class Gilly : MonoBehaviour
     float BodyCountLeft;
     public float totalNSliceCount = 2f;
     float NSliceCountLeft;
+    public float totalPSliceCount = 2f;
+    float PSliceCountLeft;
 
     // Start is called before the first frame update
     void Start()
     {
+        killSwitch = false;
         NSliceCountLeft = totalNSliceCount;
+        PSliceCountLeft = totalPSliceCount;
         countLeft = totalCount;
         nurseCountLeft = totalNurseCount;
         BodyCountLeft = totalBodyCount;
@@ -33,9 +38,9 @@ public class Gilly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playuhBodee == null)
+        if (killSwitch == true)
         {
-            return;
+            PSliceCountLeft -= Time.deltaTime;
         }
 
         if (BodyCountLeft == totalBodyCount)
@@ -47,7 +52,14 @@ public class Gilly : MonoBehaviour
         }
         if (playerThere() & countLeft <= 0 & nurzeeBody == null)
         {
-            Destroy(playuhBodee);
+            killSwitch = true;
+            anim.SetTrigger("IsSlicing");
+            if (PSliceCountLeft <= 0)
+            {
+                anim.SetTrigger("NotSlicing");
+                Destroy(playuhBodee);
+
+            }
         }
         if (playerThere() & countLeft <= 0 & nurzeeBody != null)
         {
@@ -63,11 +75,11 @@ public class Gilly : MonoBehaviour
         {
             countLeft = totalCount;
         }
-        if (playuhBodee.GetComponent<Moveee>().enabled == false)
+        if (playuhBodee.GetComponent<Moveee>().enabled == false & killSwitch == false)
         {
             BodyCountLeft -= Time.deltaTime;
         }
-        if (BodyCountLeft <= 0)
+        if (BodyCountLeft <= 0 & killSwitch == false)
         {
             playuhBodee.GetComponent<Moveee>().enabled = true;
             BodyCountLeft = totalBodyCount;
@@ -92,6 +104,7 @@ public class Gilly : MonoBehaviour
             if (NSliceCountLeft <= 0)
             {
                 Destroy(nurzeeBody);
+                NSliceCountLeft = totalNSliceCount;
             }
         }
     }
