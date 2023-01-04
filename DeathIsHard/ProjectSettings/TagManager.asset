@@ -41,6 +41,9 @@ TagManager:
   - name: realbgUnder
     uniqueID: 4165855345
     locked: 0
+  - name: realbgmiddle
+    uniqueID: 584322507
+    locked: 0
   - name: realbg
     uniqueID: 2402013475
     locked: 0
