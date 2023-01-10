@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gilly : MonoBehaviour
 {
@@ -52,14 +53,7 @@ public class Gilly : MonoBehaviour
         }
         if (playerThere() & countLeft <= 0 & nurzeeBody == null)
         {
-            killSwitch = true;
-            anim.SetTrigger("IsSlicing");
-            if (PSliceCountLeft <= 0)
-            {
-                anim.SetTrigger("NotSlicing");
-                Destroy(playuhBodee);
-
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if (playerThere() & countLeft <= 0 & nurzeeBody != null)
         {
