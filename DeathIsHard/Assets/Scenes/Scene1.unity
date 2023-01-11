@@ -3380,7 +3380,7 @@ MonoBehaviour:
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 127
-  sped: 2
+  sped: 3
   jumpHeight: 500
   bodySize: 1
   animatr: {fileID: 1684014221}
